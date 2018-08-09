@@ -1,0 +1,7 @@
+[MYSQL]
+host=bp1foexf796pfwb3po.mysql.rds.aliyuncs.com
+port=3306
+user=uat01
+passwd=P@ssw0rd
+db=fundtjs_uat
+charset=utf8
