@@ -362,9 +362,9 @@ function hide_img(obj){
 </div>
 <div class='heading'>
 <h1>自动化测试报告,测试结果如下：</h1>
-<p class='attribute'><strong>开始时间:</strong> 2018-08-07 14:51:38</p>
-<p class='attribute'><strong>耗时:</strong> 0:00:08.344477</p>
-<p class='attribute'><strong>状态:</strong> <span class="tj passCase">Pass</span>12 <span class="tj failCase">Failure</span>1</p>
+<p class='attribute'><strong>开始时间:</strong> 2018-08-10 15:44:16</p>
+<p class='attribute'><strong>耗时:</strong> 0:00:00.205012</p>
+<p class='attribute'><strong>状态:</strong> <span class="tj passCase">Pass</span>2</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -398,7 +398,7 @@ function hide_img(obj){
 </tr>
 
 <tr class='passClass'>
-    <td>test_allot_tradeBB.Allot</td>
+    <td>test_login.Login</td>
     <td>2</td>
     <td>2</td>
     <td>0</td>
@@ -408,7 +408,7 @@ function hide_img(obj){
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td ><div class='testcase'>test_allot01: 申购宝宝类类基金000379，输入正确密码，申购成功</div></td>
+    <td ><div class='testcase'>test_login: 正确的用户名和密码登录成功</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -423,8 +423,8 @@ function hide_img(obj){
         </div>
         <pre>
         
-pt1.1: 2018-08-07 14:51:38,485 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
-申请协议号:20180727001081
+pt1.1: 2018-08-10 15:44:16,834 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
+2018-08-10 15:44:16,894 - log.py [line:35]- DEBUG : 登录返回信息'{'head': {'code': '0', 'msg': '成功'}, 'body': {'code': '13770506773', 'hideCode': '137****6773', 'name': '赵耀测试数据', 'email': None, 'corporationName': '金石基金信息科技部', 'role': '1', 'status': '1', 'certificateType': None, 'certificateNo': None, 'certificateExpDate': None, 'clientId': '1688', 'activityID': None, 'sourceID': None, 'img': None, 'admittance': '1', 'openStatus': '6', 'openStatusName': '开户成功', 'openDescribe': '账户总额：20,881,614.82元', 'totalAsset': '20,881,614.82', 'isSetPwd': '1', 'token': '657939c3fccc91233bd1c4e15a37a8d3'}}'
 
 
         </pre>
@@ -436,7 +436,7 @@ pt1.1: 2018-08-07 14:51:38,485 - log.py [line:35]- DEBUG : 用户13770506773,获
 </tr>
 
 <tr id='pt1.2' class='hiddenRow'>
-    <td ><div class='testcase'>test_allot02: 申购宝宝类类基金000379，输入错误密码，申购失败</div></td>
+    <td ><div class='testcase'>test_login2: 正确的用户名和错误密码</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -451,376 +451,9 @@ pt1.1: 2018-08-07 14:51:38,485 - log.py [line:35]- DEBUG : 用户13770506773,获
         </div>
         <pre>
         
-pt1.2: 2018-08-07 14:51:42,278 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
-交易密码错误，申购失败
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr class='failClass'>
-    <td>test_allot_tradeDQ.Allot</td>
-    <td>3</td>
-    <td>2</td>
-    <td>1</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',3)">详情</a></td>
-    <td>&nbsp;</td>
-</tr>
-
-<tr id='pt2.1' class='hiddenRow'>
-    <td ><div class='testcase'>test_allot01: 申购活期类基金210008，输入正确密码，申购成功</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
-        通过</a></span>
-
-    <div id='div_pt2.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt2.1: 2018-08-07 14:51:42,440 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
-{'head': {'code': '0', 'msg': '成功'}, 'body': {'successType': None, 'allotNo': None, 'balance': None, 'clearDate': None, 'applyTime': None, 'applyDate': '2018-08-07', 'orderTime': '2018-08-07 14:51:44', 'confirmDate': None, 'adList': None, 'isPublic': '0'}}
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr id='pt2.2' class='hiddenRow'>
-    <td ><div class='testcase'>test_allot02: 申购活期类基金210008，输入错误密码，申购失败</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
-        通过</a></span>
-
-    <div id='div_pt2.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt2.2: 2018-08-07 14:51:42,618 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
-{'head': {'code': '-10004', 'msg': '交易密码输入错误'}, 'body': ''}
-交易密码错误，申购失败
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr id='ft2.3' class='none'>
-    <td ><div class='testcase'>test_allot03: 定期理财，输入的申购金额小于最小起投金额</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status failCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.3')" >
-        失败</a></span>
-
-    <div id='div_ft2.3' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.3').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.3: 2018-08-07 14:51:42,771 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
-{'head': {'code': '0', 'msg': '成功'}, 'body': {'successType': None, 'allotNo': None, 'balance': None, 'clearDate': None, 'applyTime': None, 'applyDate': '2018-08-07', 'orderTime': '2018-08-07 14:51:44', 'confirmDate': None, 'adList': None, 'isPublic': '0'}}
-Traceback (most recent call last):
-  File "F:\PycharmProjects\Study\DianJin\case\test_allot_tradeDQ.py", line 48, in test_allot03
-    self.assertEqual(res["head"]["msg"],"申请失败","接口没有判断最小申购金额")
-AssertionError: '成功' != '申请失败'
-- 成功
-+ 申请失败
- : 接口没有判断最小申购金额
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr class='passClass'>
-    <td>test_allot_tradeHQ.Allot</td>
-    <td>3</td>
-    <td>3</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c3',3)">详情</a></td>
-    <td>&nbsp;</td>
-</tr>
-
-<tr id='pt3.1' class='hiddenRow'>
-    <td ><div class='testcase'>test_allot01: 申购活期类基金210008，输入正确密码，申购成功</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
-        通过</a></span>
-
-    <div id='div_pt3.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt3.1: 2018-08-07 14:51:42,961 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
-{'head': {'code': '0', 'msg': '成功'}, 'body': {'successType': '0', 'allotNo': '20180727001082', 'balance': 10000.0, 'clearDate': None, 'applyTime': '093000', 'applyDate': '20180730', 'orderTime': '2018-08-07 14:51:45', 'confirmDate': '2018-07-31', 'adList': None, 'isPublic': '1'}}
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr id='pt3.2' class='hiddenRow'>
-    <td ><div class='testcase'>test_allot02: 申购活期类基金210008，输入错误密码，申购失败</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.2')" >
-        通过</a></span>
-
-    <div id='div_pt3.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt3.2: 2018-08-07 14:51:44,228 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
-{'head': {'code': '-10004', 'msg': '交易密码输入错误'}, 'body': ''}
-交易密码错误，申购失败
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr id='pt3.3' class='hiddenRow'>
-    <td ><div class='testcase'>test_allot03: 申购活期类基金210008，申购金额小于追加金额，申购失败</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.3')" >
-        通过</a></span>
-
-    <div id='div_pt3.3' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.3').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt3.3: 2018-08-07 14:51:44,386 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
-{'head': {'code': '1008', 'msg': '申请失败'}, 'body': ''}
-交易密码错误，申购失败
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr class='passClass'>
-    <td>test_allot_tradeJJ.Allot</td>
-    <td>2</td>
-    <td>2</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c4',2)">详情</a></td>
-    <td>&nbsp;</td>
-</tr>
-
-<tr id='pt4.1' class='hiddenRow'>
-    <td ><div class='testcase'>test_allot01: 申购精选基金002564，输入正确密码，申购成功</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
-        通过</a></span>
-
-    <div id='div_pt4.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt4.1: 2018-08-07 14:51:45,237 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
-{'head': {'code': '0', 'msg': '成功'}, 'body': {'successType': '0', 'allotNo': '20180727001083', 'balance': 10.0, 'clearDate': None, 'applyTime': '093000', 'applyDate': '20180730', 'orderTime': '2018-08-07 14:51:47', 'confirmDate': '2018-07-31', 'adList': None, 'isPublic': '1'}}
-申请协议号:20180727001083
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr id='pt4.2' class='hiddenRow'>
-    <td ><div class='testcase'>test_allot02: 申购精选基金002564，输入错误密码，申购失败</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.2')" >
-        通过</a></span>
-
-    <div id='div_pt4.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt4.2: 2018-08-07 14:51:46,252 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
-{'head': {'code': '-10004', 'msg': '交易密码输入错误'}, 'body': ''}
-交易密码错误，申购失败
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr class='passClass'>
-    <td>test_login.Login</td>
-    <td>2</td>
-    <td>2</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c5',2)">详情</a></td>
-    <td>&nbsp;</td>
-</tr>
-
-<tr id='pt5.1' class='hiddenRow'>
-    <td ><div class='testcase'>test_login: 正确的用户名和密码登录成功</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
-        通过</a></span>
-
-    <div id='div_pt5.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt5.1: 2018-08-07 14:51:46,417 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr id='pt5.2' class='hiddenRow'>
-    <td ><div class='testcase'>test_login2: 正确的用户名和错误密码</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.2')" >
-        通过</a></span>
-
-    <div id='div_pt5.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt5.2: 2018-08-07 14:51:46,518 - log.py [line:35]- DEBUG : 用户18752311511,获取到公司名称'一米生活馆'
+pt1.2: 2018-08-10 15:44:16,940 - log.py [line:35]- DEBUG : 用户18752311511,获取到公司名称'一米生活馆'
+2018-08-10 15:44:16,994 - log.py [line:35]- DEBUG : 登录返回信息'{'head': {'code': '-10003', 'msg': '您输入的手机号与密码不符！'}, 'body': ''}'
 {'head': {'code': '-10003', 'msg': '您输入的手机号与密码不符！'}, 'body': ''}
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-    <td>无截图</td>
-</tr>
-
-<tr class='passClass'>
-    <td>test_orderdetail.Login</td>
-    <td>1</td>
-    <td>1</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c6',1)">详情</a></td>
-    <td>&nbsp;</td>
-</tr>
-
-<tr id='pt6.1' class='hiddenRow'>
-    <td ><div class='testcase'>test_orderdetail</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
-        通过</a></span>
-
-    <div id='div_pt6.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt6.1: 2018-08-07 14:51:46,606 - log.py [line:35]- DEBUG : 用户13770506773,获取到公司名称'金石基金信息科技部'
 
 
         </pre>
@@ -833,9 +466,9 @@ pt6.1: 2018-08-07 14:51:46,606 - log.py [line:35]- DEBUG : 用户13770506773,获
 
 <tr id='total_row'>
     <th>统计</th>
-    <th>13</th>
-    <th>12</th>
-    <th>1</th>
+    <th>2</th>
+    <th>2</th>
+    <th>0</th>
     <th>0</th>
     <th>&nbsp;</th>
     <th>&nbsp;</th>
@@ -843,7 +476,7 @@ pt6.1: 2018-08-07 14:51:46,606 - log.py [line:35]- DEBUG : 用户13770506773,获
 </table>
 <script>
     showCase(1);
-    drawCircle(12, 1, 0);
+    drawCircle(2, 0, 0);
 </script>
 
 <div id='ending'>&nbsp;</div>

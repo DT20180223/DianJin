@@ -1,12 +1,13 @@
 __author__ = 'zhaoyao'
 import unittest
 import time
-from DianJin.common import HTMLTestRunner_cn
+import HTMLTestRunner_cn
 import configparser
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import smtplib
 import os
+from BeautifulReport.BeautifulReport import BeautifulReport
 
 cur_path = os.path.dirname(os.path.realpath(__file__))
 case_path = os.path.join(cur_path,"case")
@@ -14,21 +15,31 @@ cofig_Path = os.path.join(cur_path,"config\mailconfig")
 print(cofig_Path)
 
 
-
 def add_case():
-    discover = unittest.defaultTestLoader.discover(case_path,pattern="test*.py",top_level_dir=None)
-    return discover
+    all_case = unittest.defaultTestLoader.discover(case_path,pattern="test*.py",top_level_dir=None)
+    return all_case
 
 def run_case(all_case):
+
     now = time.strftime("%Y_%m_%d_%H_%M_%S")
     report_path = os.path.join(cur_path, "reports\\")
-    report_name =report_path+now+"report.html"
-    fp = open(report_name, "wb")
+    # report_name =report_path+now+"report.html"
+    report_name =now+"report.html"
+    with open(report_path+report_name,"wb") as fp:
+        runner = HTMLTestRunner_cn.HTMLTestRunner(stream=fp,title=u'自动化测试报告,测试结果如下：',description=u'用例执行情况：')
+        runner.run(all_case)
+    # all_case2 = add_case()
+    # result = BeautifulReport(all_case2)
+    # result.report(filename=report_name, description='点金接口测试报告', log_path=report_path)
 
-    runner = HTMLTestRunner_cn.HTMLTestRunner(stream=fp,title=u'自动化测试报告,测试结果如下：',description=u'用例执行情况：')
-    runner.run(all_case)
-    fp.close()
-    send_mail(report_name,cofig_Path)
+
+
+
+
+
+
+    # send_mail(report_name,cofig_Path)
+
 
 def send_mail(report_name,cofig_Path):
 
@@ -41,7 +52,6 @@ def send_mail(report_name,cofig_Path):
     receiver = config.get("MAIL","receiver")
     port = config.get("MAIL","port")
     print(sender,psw,smtp_server,receiver,port)
-    print(type(sender))
 
     '''发送测试报告内容'''
     with open(report_name, "rb") as f:
@@ -62,21 +72,17 @@ def send_mail(report_name,cofig_Path):
         smtp = smtplib.SMTP()
         smtp.connect(smtp_server)                     # 连服务器
         smtp.login(sender, psw)
-        print("第一个链接方式")
+        # print("第一个链接方式")
     except:
         smtp = smtplib.SMTP_SSL(smtp_server,port)
         smtp.login(sender, psw)                       # 登录
-        print("第二个链接方式")
+        # print("第二个链接方式")
 
     smtp.sendmail(sender,receiver,msg.as_string())
 
     smtp.quit()
     print('test report email has send out !')
 
-
-
-# if __name__=="__main__":
-#     all_case =add_case()
-#     run_case(all_case)
-report_name = "F:\PycharmProjects\Study\DianJin\\reports\\2018_08_07_14_51_38report.html"
-send_mail(report_name,cofig_Path)
+if __name__=="__main__":
+    all_case =add_case()
+    run_case(all_case)

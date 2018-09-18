@@ -1,7 +1,8 @@
-__author__ = 'zhaoyao'
-
 import unittest
-
+import sys
+import os
+cur_path = os.path.dirname(os.path.dirname(os.getcwd()))
+sys.path.append(cur_path)
 from DianJin.common.login import LOGIN
 from DianJin.common.db_operation import DBmethod
 
@@ -12,7 +13,7 @@ class Login(unittest.TestCase):
         login = LOGIN()
         res = login.login("13770506773","zy568521")
         name = res["body"]["name"]
-        totalAsset =  res["body"]["totalAsset"]
+        # totalAsset =  res["body"]["totalAsset"]
 
         self.assertEqual(name,"赵耀测试数据","用例执行错误")
 

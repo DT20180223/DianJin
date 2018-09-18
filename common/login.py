@@ -18,6 +18,7 @@ class LOGIN():
             "password":password
         }
         res = requests.post(url,data).json()
+        print("登录成功")
         # self.log.debug_debug("登录返回信息'%s'" % (res))
         return res
 
@@ -30,7 +31,7 @@ class LOGIN():
         }
         res = requests.post(url,data).json()
         corporationName = res["body"][0]
-        self.log.debug_debug("用户%s,获取到公司名称'%s'" % (mobile,corporationName))
+        # self.log.debug_debug("用户%s,获取到公司名称'%s'" % (mobile,corporationName))
         return corporationName
 
 
