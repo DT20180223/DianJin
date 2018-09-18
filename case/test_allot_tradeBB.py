@@ -11,8 +11,7 @@ sys.path.append(cur_path)
 from DianJin.common.login import LOGIN
 from DianJin.common.db_operation import DBmethod
 
-#测试git提交
-#有改变的啊
+
 class Allot(unittest.TestCase):
 
     def allot_trade(self,applyAmount,tradePwd):
